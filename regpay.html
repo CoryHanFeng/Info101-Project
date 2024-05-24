@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PandaPalate</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+</head>
+
+<body id="regpay"> 
+    <header>
+        <a href="index.html" id="home-page">
+            <img src="logo.png" alt="Home Icon" id="home-icon">
+        </a>
+        <h1 id="titlename">PandaPalate</h1>
+        <nav id="navbar">
+            <ul>
+                <li class="dropdown-container">
+                    <a href="#" class="dropbutton">Quick Links</a>
+                    <div class="dropdown-content">
+                        <a href="index.html">Homepage</a>
+                        <a href="products.html">Products</a>
+                        <a href="regpay.html">Regpay</a>
+                        <a href="faq.html">Frequently asked questions</a>
+                    </div>
+                </li>
+            </ul>
+            <span id="signup"><a href ="regpay.html">Sign Up</a></span>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="mainTile">
+            <h1 id="Welcoming"> Welcome Back!</h1>
+            <br>
+            <div class="buttonContainer">
+                <div class="buttonWrapper">
+                    <button class="logIn">Log In</button>
+                </div>
+                <div class="buttonWrapper">
+                    <button class="lessonSelect">Select and Pay</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Login form hidden by default -->
+
+		<!--EDIT THIS TOMORROW-->
+        <h2 id="loginTitle" style="display: none;">Login</h2>
+        <div class="login-form" style="display: none;">
+            <form action="/login" method="POST">
+                <label for="username">Username or Email:</label><br>
+                <input type="text" id="username" name="username" required><br><br>
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password" required><br><br>
+
+                <input type="submit" value="Login">
+            </form>
+        </div>
+
+        <!-- Go Back button -->
+        <div class="goBack" style="display: none;">
+            <button>Go Back</button>
+        </div>
+    </div>
+
+    <!-- Footer and speech bubble -->
+    <footer>PandaPalate ©</footer>
+    <div id="speech-bubble">Welcome to the register and pay page. Please select Log-in or Select and Pay</div>
+    <img src="PANDAICON.png" alt="Icon" id="btm-right">
+
+    <script>
+        document.querySelector(".logIn").addEventListener("click", function() {
+            var loginForm = document.querySelector(".login-form");
+            var loginTitle = document.getElementById("loginTitle");
+            var welcomeBack = document.getElementById("Welcoming");
+            var mainTile = document.querySelector(".mainTile");
+            var goBackButton = document.querySelector(".goBack");
+            if (loginForm.style.display === "none") {
+                loginForm.style.display = "block";
+                loginTitle.style.display = "block";
+                welcomeBack.style.display = "none";
+                goBackButton.style.display = "block";
+                mainTile.style.display = "none";
+            } else {
+                loginForm.style.display = "none";
+                loginTitle.style.display = "none";
+                goBackButton.style.display = "none";
+            }
+        });
+
+        document.querySelector(".lessonSelect").addEventListener("click", function() {
+            var loginForm = document.querySelector(".login-form");
+            var loginTitle = document.getElementById("loginTitle");
+            var welcomeBack = document.getElementById("Welcoming");
+            var mainTile = document.querySelector(".mainTile");
+            var goBackButton = document.querySelector(".goBack");
+            if (loginForm.style.display === "none") {
+                loginForm.style.display = "block";
+                loginTitle.style.display = "block";
+                welcomeBack.style.display = "none";
+                goBackButton.style.display = "block";
+                mainTile.style.display = "none";
+            } else {
+                loginForm.style.display = "none";
+                loginTitle.style.display = "none";
+                goBackButton.style.display = "none";
+            }
+        });
+
+		document.querySelector(".goBack").addEventListener("click", function() {
+			var loginForm = document.querySelector(".login-form");
+            var loginTitle = document.getElementById("loginTitle");
+            var welcomeBack = document.getElementById("Welcoming");
+            var mainTile = document.querySelector(".mainTile");
+            var goBackButton = document.querySelector(".goBack");
+		if (goBackButton.style.display === "none"){	
+			loginForm.style.display = "block";
+                loginTitle.style.display = "block";
+                welcomeBack.style.display = "none";
+                goBackButton.style.display = "";
+                mainTile.style.display = "block";
+            } else {
+                loginForm.style.display = "none";
+                loginTitle.style.display = "none";
+                goBackButton.style.display = "none";
+				mainTile.style.display = "block";
+            }
+		});
+
+    </script>
+</body>
+</html>
